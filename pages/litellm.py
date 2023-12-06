@@ -2,8 +2,10 @@ import streamlit as st
 import threading
 import os
 import litellm
+import langsmith
 from litellm import completion
 from dotenv import load_dotenv
+from langsmith.run_helpers import traceable
 
 # load .env, so litellm reads from .env
 load_dotenv()
@@ -34,6 +36,12 @@ def get_model_output(prompt, model_name):
 def get_model_output_thread(prompt, model_name, outputs, idx):
     output = get_model_output(prompt, model_name)
     outputs[idx] = output
+
+# Langsmith
+export LANGCHAIN_TRACING_V2=true
+export LANGCHAIN_ENDPOINT="https://api.smith.langchain.com"
+export LANGCHAIN_API_KEY="ls__7fcb9e365e4b44d4bc7bed57db649b57"
+export LANGCHAIN_PROJECT="lite"
 
 # Streamlit app
 def main():
