@@ -9,6 +9,7 @@ from shared import constants
 
 api_key = os.environ/OR_API_KEY
 selected_model = sidebar(constants.OPENROUTER_DEFAULT_CHAT_MODEL)
+
 st.title("💬 Streamlit GPT")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
