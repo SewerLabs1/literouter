@@ -21,3 +21,5 @@ celery
 psutil
 mangum
 google-generativeai
+threading
+requests
