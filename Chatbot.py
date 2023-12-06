@@ -6,8 +6,7 @@ from components.Sidebar import sidebar
 import json
 from shared import constants
 
-api_key = os.environ/OR_API_KEY
-selected_model = sidebar(constants.OPENROUTER_DEFAULT_CHAT_MODEL)
+api_key, selected_model = sidebar(constants.OPENROUTER_DEFAULT_CHAT_MODEL)
 
 st.title("💬 Streamlit GPT")
 if "messages" not in st.session_state:
