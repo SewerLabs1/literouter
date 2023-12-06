@@ -1,6 +1,10 @@
+import os
 import openai
 import litellm
 import streamlit as st
+import threading
+from litellm import completion
+from dotenv import load_dotenv
 from streamlit_chat import message
 from components.Sidebar import sidebar
 import json
