@@ -10,6 +10,9 @@ from components.Sidebar import sidebar
 import json
 from shared import constants
 
+# load .env, so litellm reads from .env
+load_dotenv()
+
 api_key, selected_model = sidebar(constants.OPENROUTER_DEFAULT_CHAT_MODEL)
 
 st.title("💬 Streamlit GPT")
