@@ -1,6 +1,7 @@
 streamlit
 litellm
 langchain
+langsmith
 openai
 google-search-results
 streamlit-chat
